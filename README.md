@@ -1,12 +1,37 @@
-# Virtual-Mouse
-Hand Tracking Based virtual mouse
+#  Virtual Mouse
 
-***Install python with version __3.8__***
+Computer vision and hand gesture based virtual mouse with
 
-### INSTALL BELOW DEPENDENCIES
-```pip install cvzone```
-```pip install autopy```
-```pip install pyautogui```
-```pip install opencv-python```
-```pip install mediapipe```
-```pip install numpy```
+featuring `mouse movement`, `left click`, `right click` and `up and down scroll`
+
+
+## Environment 
+
+To run this project, you will need install python with version of `3.8` or `3.9`
+
+- __autopy__ module support python version `3.8` 
+
+
+## Deployment or Execution
+
+To deploy this project run
+
+```bash
+  python v_mouse_project.py
+```
+
+
+## Installation
+
+Install Virtual-Mouse with python package manager `pip`
+
+```bash
+  cd Virtual-Mouse
+  pip install opencv-python
+  pip install mediapipe
+  pip install autopy
+  pip install pyautogui
+  pip install cvzone
+  pip install numpy  
+```
+    
