@@ -11,6 +11,10 @@ To run this project, you will need install python with version of `3.8` or `3.9`
 
 - __autopy__ module support python version `3.8` 
 
+## Mediapipe Hand
+
+![App Screenshot](https://mediapipe.dev/images/mobile/hand_landmarks.png)
+
 
 ## Deployment or Execution
 
