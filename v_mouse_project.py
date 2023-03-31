@@ -42,6 +42,7 @@ wCam, hCam = 640, 480
 wScr, hScr = autopy.screen.size()
 frameR = 100  # Frame Reduction
 smoothening = 5
+buttonPress = False
 #################################
 
 plocX, plocY = 0, 0
@@ -76,7 +77,7 @@ while True:
 
             # Find which finger are up
             finger1 = detector.fingersUp(hand1)
-            print(finger1)
+            # print(finger1)
             
             ###################
             ### MOVE CURSOR ###
@@ -141,6 +142,32 @@ while True:
                 if scrollValue < -40:
                     print('DOWN')
                     pyautogui.scroll(scrollValue)
+
+            ###########################
+            ### Left Arrow Keypress ###
+            ###########################
+            if finger1 == [0, 0, 0, 0, 0]:
+                buttonPress = True
+            if finger1 == [1, 0, 0, 0, 0]:
+                mssg("<-- Mode")
+                if buttonPress == True:
+                    autopy.key.tap(autopy.key.Code.LEFT_ARROW)
+                    print("LEFT KEYPRESS")
+                    buttonPress = False
+
+            ############################
+            ### Right Arrow Keypress ###
+            ############################
+            if finger1 == [0, 0, 0, 0, 0]:
+                buttonPress = True
+            if finger1 == [0, 0, 0, 0, 1]:
+                mssg("--> Mode")
+                if buttonPress == True:
+                    autopy.key.tap(autopy.key.Code.RIGHT_ARROW)
+                    print("Right KEYPRESS")
+                    buttonPress = False
+
+            
     
     cv2.imshow("output", img)
     if cv2.waitKey(1) == ord('q'):
