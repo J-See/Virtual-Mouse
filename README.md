@@ -38,4 +38,8 @@ Install Virtual-Mouse with python package manager `pip`
   pip install cvzone
   pip install numpy  
 ```
+One Line Dependencies Installation
+```
+pip install -r setup.txt
+```
     
